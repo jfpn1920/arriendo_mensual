@@ -1,0 +1,89 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #ecfdf5;
+    --tarjeta: #ffffff;
+    --principal: #059669;
+    --oscuro: #064e3b;
+    --texto: #1f2937;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 480px; margin: 0 auto; }
+/* Encabezado centrado */
+.encabezado { text-align: center; margin-bottom: 24px; }
+.encabezado h1 { color: var(--principal); margin-bottom: 6px; }
+.encabezado p { color: #6b7280; }
+/* ===== Formulario ===== */
+/* Tarjeta blanca que contiene los campos */
+.formulario {
+    background: var(--tarjeta);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+/* Cada campo: etiqueta a la izquierda y número a la derecha */
+.campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+/* Quita el margen del último campo */
+.campo:last-child { margin-bottom: 0; }
+/* Casillas donde se escriben los números */
+.campo input {
+    width: 55%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: right;
+}
+/* Resalta la casilla cuando se está escribiendo en ella */
+.campo input:focus { outline: none; border-color: var(--principal); }
+/* ===== Resultados ===== */
+/* Tarjeta oscura con los totales */
+.resultados {
+    background: var(--oscuro);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+/* Cada línea de resultado: texto a la izquierda y valor a la derecha */
+.fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* La última fila no lleva línea inferior */
+.fila:last-child { border-bottom: none; }
+/* Fila del total del mes: más grande y de otro color */
+.fila.total { font-size: 1.3rem; color: #6ee7b7; }
+/* ===== Botón ===== */
+/* Botón de limpiar */
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--principal);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Efecto al pasar el mouse por el botón */
+.boton:hover { opacity: 0.85; }

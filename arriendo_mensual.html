@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arriendo_mensual</title>
+    <link rel="stylesheet" href="arriendo_mensual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="arriendo_mensual.js" defer></script>
+</head>
+<body>
+    <!------------------------------------->
+    <!--|estructuracion_arriendo_mensual|-->
+    <!------------------------------------->
+    <main class="contenedor">
+        <!-- Encabezado con título y descripción -->
+        <header class="encabezado">
+            <h1>🏠 Arriendo Mensual</h1>
+            <p>Suma el arriendo y los servicios del mes.</p>
+        </header>
+        <!-- Formulario con los valores que escribe el usuario -->
+        <section class="formulario">
+            <!-- Campo: valor del arriendo -->
+            <label class="campo">
+                <span>🏠 Arriendo</span>
+                <input type="number" id="arriendo" min="0" placeholder="0">
+            </label>
+            <!-- Campo: servicio de agua -->
+            <label class="campo">
+                <span>💧 Agua</span>
+                <input type="number" id="agua" min="0" placeholder="0">
+            </label>
+            <!-- Campo: servicio de luz -->
+            <label class="campo">
+                <span>💡 Luz</span>
+                <input type="number" id="luz" min="0" placeholder="0">
+            </label>
+            <!-- Campo: servicio de gas -->
+            <label class="campo">
+                <span>🔥 Gas</span>
+                <input type="number" id="gas" min="0" placeholder="0">
+            </label>
+            <!-- Campo: servicio de internet -->
+            <label class="campo">
+                <span>🌐 Internet</span>
+                <input type="number" id="internet" min="0" placeholder="0">
+            </label>
+            <!-- Campo: cantidad de personas entre las que se divide el total -->
+            <label class="campo">
+                <span>👥 Personas</span>
+                <input type="number" id="personas" min="1" value="1">
+            </label>
+        </section>
+        <!-- Resultados: se calculan automáticamente con JavaScript -->
+        <section class="resultados">
+            <!-- Suma de agua + luz + gas + internet -->
+            <div class="fila">
+                <span>Total servicios</span>
+                <strong id="total-servicios">$ 0</strong>
+            </div>
+            <!-- Suma de arriendo + servicios -->
+            <div class="fila total">
+                <span>Total del mes</span>
+                <strong id="total-mes">$ 0</strong>
+            </div>
+            <!-- Total dividido entre las personas -->
+            <div class="fila">
+                <span>Por persona</span>
+                <strong id="por-persona">$ 0</strong>
+            </div>
+        </section>
+        <!-- Botón para borrar todos los datos -->
+        <button id="btn-limpiar" class="boton">Limpiar todo</button>
+    </main>
+</body>
+</html>
